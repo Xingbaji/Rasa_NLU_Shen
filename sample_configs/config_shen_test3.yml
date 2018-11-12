@@ -1,0 +1,9 @@
+language: "zh"
+
+pipeline:
+- name: "nlp_spacy"
+- name: "tokenizer_jieba"
+- name: "ner_spacy"
+- name: "intent_entity_featurizer_regex"
+- name: "intent_featurizer_spacy"
+- name: "intent_classifier_sklearn"

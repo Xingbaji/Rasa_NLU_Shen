@@ -1,0 +1,13 @@
+language: "zh"
+
+pipeline:
+- name: "nlp_spacy"
+- name: "tokenizer_jieba"
+- name: "ner_spacy"
+- name: "ner_duckling_http"
+  url: "http://localhost:8000"
+  dimensions: ["time", "number", "amount-of-money", "distance","url","email","duration","volume","ordinal","temperature","phone-number"]
+- name: "ner_synonyms"
+- name: "intent_entity_featurizer_regex"
+- name: "intent_featurizer_spacy"
+- name: "intent_classifier_sklearn"
